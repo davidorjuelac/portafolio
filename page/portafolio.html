@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Creativo</title>
+  <!-- Bootstrap (solo base responsive) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <!-- model-viewer ← movido al head, fuera del nav -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+<body>
+  <!-- NAVBAR FLOTANTE — SIN CAMBIOS -->
+  <header class="nav-wrapper">
+    <nav class="nav-pill">
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-items" id="nav-items">
+        <a href="./perfil.html">Perfil</a>
+        <a href="./resumen.html">Resumen</a>
+        <a href="../index.html">Inicio</a>
+        <a href="#" class="active">Portafolio</a>
+        <a href="./contacto.html">Contacto</a>
+      </div>  
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="portafolio">
+      <div class="port-header">
+        <span class="port-tag">Piezas digitales</span>
+        <div class="nav-row">
+          <button class="nav-btn" id="port-prev" aria-label="Anterior">
+            <i class="ti ti-arrow-left" aria-hidden="true"></i>
+          </button>
+          <button class="nav-btn" id="port-next" aria-label="Siguiente">
+            <i class="ti ti-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="track-wrap">
+        <div class="port-track" id="port-track">
+
+          <!-- TARJETA 1 — model-viewer -->
+          <!-- ERROR 1 corregido: card-body estaba FUERA del port-card -->
+          <!-- ERROR 2 corregido: script del model-viewer estaba dentro del nav -->
+          <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/kerastase/media.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:400%; height:400px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">kérastase</p>
+              <p class="card-name">ADS - Reels - Story - Post</p>
+              <p class="card-desc">Desarrollo de piezas digitales promocionales para la comunicación de productos, impulso de ventas y fortalecimiento de la presencia de marca en canales digitales.</p>
+            </div>
+          </div>
+
+        
+          <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/loreal/media.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:400%; height:400px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">l'oreal</p>
+              <p class="card-name">ADS - Reels - Story - Post</p>
+              <p class="card-desc">Desarrollo de piezas digitales para la promoción de ventas, eventos y campañas de comunicación, alineadas con los objetivos comerciales y de marca.</p>
+            </div>
+          </div>
+
+          
+          <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/redken/media.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:400%; height:400px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">redken</p>
+              <p class="card-name">ADS - Reels - Story - Post</p>
+              <p class="card-desc">Desarrollo y adaptación de piezas digitales para diferentes retailers en Perú, garantizando el cumplimiento de lineamientos de marca y requerimientos.</p>
+            </div>
+          </div>
+
+          <!-- TARJETA 4 — SIN CAMBIOS -->
+         <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/policia/media.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:400%; height:400px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">policía nacional de colombia</p>
+              <p class="card-name">Motion Graphics - Reel - Story - Post</p>
+              <p class="card-desc">Desarrollo de piezas animadas y contenido gráfico para redes sociales, orientados a la comunicación institucional y divulgación de campañas informativas.</p>
+            </div>
+          </div>
+
+          
+           <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/amarilo/media.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:400%; height:400px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">constructora amarilo</p>
+              <p class="card-name">Reels - Story - Post</p>
+              <p class="card-desc">Desarrollo de piezas gráficas digitales para el sector inmobiliario, enfocadas en la promoción de proyectos y el fortalecimiento de marca.</p>
+            </div>
+          </div>
+
+        
+         <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/prysmian/media.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:400%; height:400px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">prysmian</p>
+              <p class="card-name">Reels - Story - Post - Carrusel</p>
+              <p class="card-desc">Desarrollo de piezas gráficas para comunicación interna corporativa, orientadas a fortalecer la cultura, la difusión de información y el compromiso colaborativo.</p>
+            </div>
+        </div>
+
+          <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/casaluker/media.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:400%; height:400px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">casa luker</p>
+              <p class="card-name">Reels - Story - Post - Carrusel</p>
+              <p class="card-desc">Desarrollo de piezas gráficas para campañas de motivación comercial, orientadas al fortalecimiento de equipos de ventas y cumplimiento de objetivos.</p>
+            </div>
+          </div>
+
+
+          <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/sigra/media.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:400%; height:400px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">sigra</p>
+              <p class="card-name">Reels - Story - Post - Carrusel</p>
+              <p class="card-desc">Desarrollo de piezas gráficas promocionales para productos del sector panadero, enfocadas en la comunicación comercial y fortalecimiento de marca.</p>
+            </div>
+          </div>
+
+          <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/boehringer ingelheim/banner.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:400%; height:400px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">boehringer ingelheim</p>
+              <p class="card-name">Banner</p>
+              <p class="card-desc">SDiseño y desarrollo de banner promocional para productos desparasitantes para mascotas, orientado a la comunicación de beneficios y apoyo.</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="port-dots" id="port-dots"></div>
+    </section>
+
+
+    <!-- =============================================
+   SEGUNDA SECCIÓN — pégala después del </section> de la primera
+   Los IDs usan port2- para no chocar con la primera
+   ============================================= -->
+
+<section class="portafolio">
+
+  <div class="port-header">
+    <span class="port-tag">impresos</span>
+    <div class="nav-row">
+      <button class="nav-btn" id="port2-prev" aria-label="Anterior">
+        <i class="ti ti-arrow-left" aria-hidden="true"></i>
+      </button>
+      <button class="nav-btn" id="port2-next" aria-label="Siguiente">
+        <i class="ti ti-arrow-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="track-wrap">
+    <div class="port-track" id="port2-track">
+
+      <!-- TARJETA 1 -->
+      <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/cencosud/sixpack.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:450%; height:450px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">cencosud</p>
+              <p class="card-name">Empaque Sixpack</p>
+              <p class="card-desc">Diseño y desarrollo de packaging tipo six pack para Oktoberfest, enfocado en la identidad visual del producto y su impacto en el punto de venta.</p>
+            </div>
+        </div>
+
+      <!-- TARJETA 2 -->
+       <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/policia/personaje.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:450%; height:450px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">policía nacional de colombia</p>
+              <p class="card-name">Segurito Papertoy</p>
+              <p class="card-desc">Diseño y desarrollo de papertoy con temática navideña para actividades dirigidas a hijos de miembros de la fuerza pública durante la temporada decembrina.</p>
+            </div>
+        </div>
+      
+
+      <!-- TARJETA 3 -->
+      <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/pfizer/cuaderno.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:420%; height:420px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">pfizer</p>
+              <p class="card-name">Cuaderno</p>
+              <p class="card-desc">Diseño y desarrollo gráfico de cuaderno corporativo para Pfizer, alineado con los lineamientos de identidad visual y comunicación de la marca.</p>
+            </div>
+        </div>
+
+      <!-- TARJETA 4 -->
+      <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/cremhelado/impresion.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:400%; height:400px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">cremhelado</p>
+              <p class="card-name">Móvil Publicitario</p>
+              <p class="card-desc">Desarrollo de propuesta gráfica móvil publicitario temático de Halloween, orientada a promocionar la marca y generar impacto visual.</p>
+            </div>
+        </div>
+
+      <!-- TARJETA 5 -->
+      <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/sigra/banner.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:400%; height:400px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">sigra</p>
+              <p class="card-name">Pendón</p>
+              <p class="card-desc">Diseño y desarrollo de pendón publicitario para marcas del sector panadero, orientado a la promoción de productos y visibilidad de marca.</p>
+            </div>
+        </div>
+
+      <!-- TARJETA 6 -->
+      <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/colombochilena/volante.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-orbit="0deg 95deg 100%"
+                camera-controls
+                disable-zoom
+                style="width:420%; height:420px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">cci colombo chilena</p>
+              <p class="card-name">Volantes</p>
+              <p class="card-desc">Diseño y desarrollo de material POP para campañas promocionales, exhibición de productos y fortalecimiento de marca en punto de venta.</p>
+            </div>
+        </div>
+  
+      <div class="port-card">
+            <div class="card-3d">
+              <model-viewer
+                src="/medios/portafolio/orusdata/volante.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:460%; height:460px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+            </div>
+            <div class="card-body">
+              <p class="card-cat">orusdata</p>
+              <p class="card-name">Volantes</p>
+              <p class="card-desc">Desarrollo de piezas POP para puntos de venta y activaciones comerciales, enfocadas en mejorar la visibilidad de productos y la experiencia de marca.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="port-dots" id="port2-dots"></div>
+
+</section>
+
+<section class="portafolio">
+  <div class="duo-grid">
+
+  <div class="duo-item">
+    <p class="duo-title">postproducción</p>
+    <div class="duo-card">
+      <div class="card-3d">
+        <model-viewer
+                src="/medios/portafolio//policia/fotos.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:550%; height:550px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+      </div>
+      <div class="card-body">
+        <p class="card-cat">policía nacional de colombia</p>
+        <p class="card-name">Fotografía - Video</p>
+        <p class="card-desc">Registro fotográfico y audiovisual de eventos relacionados con procesos de restitución de derechos, garantizando la documentación visual y comunicacional de las actividades realizadas.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="duo-item">
+    <p class="duo-title">modelado 3d</p>
+    <div class="duo-card">
+      <div class="card-3d">
+        <model-viewer
+                src="/medios/portafolio/aroma/modelado.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:650%; height:650px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+      </div>
+      <div class="card-body">
+        <p class="card-cat">aroma</p>
+        <p class="card-name">Banner - Totem - Juego</p>
+        <p class="card-desc">Desarrollo de piezas visuales en 3D y preparación de artes finales para lanzamiento BTL, garantizando coherencia gráfica e impacto visual de la campaña.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+
+<section class="portafolio">
+  <div class="duo-grid">
+
+  <div class="duo-item">
+    <p class="duo-title">identidad visual</p>
+    <div class="duo-card">
+      <div class="card-3d">
+        <model-viewer
+                src="/medios/portafolio/policia/logo.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:600%; height:600px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+      </div>
+      <div class="card-body">
+        <p class="card-cat">policía nacional de colombia</p>
+        <p class="card-name">Logo</p>
+        <p class="card-desc">Diseño y desarrollo de identidad visual corporativa para el Centro de Conciliación y Mediación, fortaleciendo su reconocimiento institucional y comunicación de marca.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="duo-item">
+    <p class="duo-title">modelado 3d</p>
+    <div class="duo-card">
+      <div class="card-3d">
+        <model-viewer
+                src="/medios/portafolio/aroma/modelado.glb"
+                alt="Personaje"
+                auto-rotate
+                rotation-per-second="40deg"
+                camera-controls
+                camera-orbit="0deg 95deg 100%"
+                disable-zoom
+                style="width:600%; height:600px; background:transparent; --poster-color:transparent;">
+              </model-viewer>
+      </div>
+      <div class="card-body">
+        <p class="card-cat">aroma</p>
+        <p class="card-name">Nombre proyecto</p>
+        <p class="card-desc">Descripción del proyecto.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer-nombre">© 2026 David Orjuela</p>
+    <p class="footer-rol">Diseñador Gráfico</p>
+  </footer>
+
+  <script src="../js/scripts.js"></script>
+</body>
+</html>
