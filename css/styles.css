@@ -1092,14 +1092,19 @@ main {
   }
   .sw-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    gap: 5px;
+    padding: 0 16px; /* ← agrega esto */
+    box-sizing: border-box;
+    width: 70%;
+    margin: 0 auto;
+}
   }
   .sw-icon {
-    padding: 10px 10px;
+    padding: 5px 5px;
   }
   .sw-icon img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
   .sw-icon span {
     font-size: 12px;
