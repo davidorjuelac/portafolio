@@ -344,6 +344,8 @@ display: inline-flex;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px 20px;
+  max-width: 300px;
+  margin: 0 auto;
 }
 .sw-icon {
   display: flex;
@@ -1082,36 +1084,37 @@ main {
     text-align: center;
     width: 80%;
     margin: 0 auto 20px;
-  }  
+  }
   .col-izq,
   .col-der {
-    
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .bloque {
     margin-bottom: 50px;
+    width: 100%;
   }
   .sw-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
-    padding: 0 16px; /* ← agrega esto */
-    box-sizing: border-box;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
     width: 100%;
-}
+    box-sizing: border-box;
+  }
   .sw-icon {
-    padding: 5px 5px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
   }
   .sw-icon img {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
   }
   .sw-icon span {
-    font-size: 12px;
-  }
-  .sec-title {
+    font-size: 10px;
     text-align: center;
   }
   .timeline {
@@ -1120,14 +1123,11 @@ main {
     margin: 0 auto;
   }
   .col-der {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
   }
   .exp-desc {
     position: static !important;
-    width: 150% !important;
+    width: 95% !important;
     right: auto !important;
     box-sizing: border-box !important;
   }
@@ -1143,6 +1143,7 @@ main {
     border-left: 1px solid #222;
     padding-left: 14px;
   }
+}
   /* ── Software siempre encendido en móvil ── */
 @media (max-width: 640px) {
   .sw-icon:has(.sw-ps) {
