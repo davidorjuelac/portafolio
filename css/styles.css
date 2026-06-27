@@ -1127,7 +1127,7 @@ main {
   }
   .exp-desc {
     position: static !important;
-    width: 95% !important;
+    width: 97% !important;
     right: auto !important;
     box-sizing: border-box !important;
   }
@@ -1229,17 +1229,17 @@ main {
 @media (max-width: 640px) {
   .contacto-grid {
     grid-template-columns: 1fr;
-    max-width: 320px;
-    margin: 0 auto 2rem;
+    max-width: 100%;
+    margin: 0 0 2rem 0;
   }
   .contacto-card {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .contacto-btn {
-    display: flex;
-    justify-content: center;
-    max-width: 320px;
-    margin: 0 auto;
+    display: inline-flex;
+    justify-content: flex-start;
+    max-width: 100%;
+    margin: 0;
   }
 }
 
